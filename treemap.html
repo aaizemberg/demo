@@ -1,0 +1,42 @@
+<!doctype html>
+<meta charset="utf-8">
+
+<!-- load D3js -->
+<script src="//d3plus.org/js/d3.js"></script>
+
+<!-- load D3plus after D3js -->
+<script src="//d3plus.org/js/d3plus.js"></script>
+
+<!-- create container element for visualization -->
+<div id="viz"></div>
+
+<script>
+
+  // sample data array
+  var data = [{"carrera":"Ingeniero Eléctrico","cant":62},
+{"carrera":"Ingeniero Electrónico","cant":1046},
+{"carrera":"Ingeniero en Armas","cant":30},
+{"carrera":"Ingeniero en Informática","cant":370},
+{"carrera":"Ingeniero en Petróleo","cant":259},
+{"carrera":"Ingeniero Industrial","cant":3220},
+{"carrera":"Ingeniero Mecánico","cant":495},
+{"carrera":"Ingeniero Metalúrgico","cant":7},
+{"carrera":"Ingeniero Naval","cant":93},
+{"carrera":"Ingeniero Químico","cant":508},
+{"carrera":"Lic.en Administración y Sistemas","cant":338},
+{"carrera":"Licenciado en Análisis de Sistemas","cant":110},
+{"carrera":"Licenciado en Ciencias Meteorológicas","cant":1},
+{"carrera":"Licenciado en Hidrografía","cant":16},
+{"carrera":"Licenciado en Informática","cant":88},
+{"carrera":"Licenciado en Oceanografía","cant":115}];
+
+  // instantiate d3plus
+  var visualization = d3plus.viz()
+    .container("#viz")  // container DIV to hold the visualization
+    .data(data)  // data to use with the visualization
+    .type("tree_map")   // visualization type
+    .id("carrera")         // key for which our data is unique on
+    .size("cant")      // sizing of blocks
+    .draw()             // finally, draw the visualization!
+
+</script>
