@@ -1,3 +1,5 @@
-# demo
+# practica con d3plus
 
-este readme esta en **gh-pages**
+treemap.html
+
+carreras.html
