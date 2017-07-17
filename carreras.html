@@ -3,35 +3,31 @@
 <script src="//d3plus.org/js/d3.js"></script>
 <script src="//d3plus.org/js/d3plus.js"></script>
 
-<div id="torta"></div>
-<div id="area"></div>
+<div id="torta" style="width: 30%; float:left">
+</div>
+
+<div id="area" style="width: 70%; float:right">
+</div>
 
 <script>
-
-d3.json("data.json", function(data) {
-
-  console.log(data[0]);
-  
   d3plus.viz()
-    .container("#torta")
-    .data(data)  
-    .type("pie")    
-    .size("graduados")
-    .id("carrera")         
-    .time("año")    
-    .draw()
+        .container("#torta")
+        .data("data.json")  
+        .type("pie")    
+        .size("graduados")
+        .id("carrera")         
+        .time("año")    
+        .draw()
 
   d3plus.viz()
-    .container("#area")  
-    .data(data)  
-    .type("stacked")
-    .id("carrera")  
-    .text("carrera")
-    .y("graduados") 
-    .x("año")       
-    .time("año")    
-    .draw()
-
-});  
-
+        .container("#area")  
+        .data("data.json")  
+        .type("stacked")
+        .id("carrera")  
+        .text("carrera")
+        .y("graduados") 
+        .x("año")       
+        .time("año")
+        .shape({"interpolate": "basis"})
+        .draw()
 </script>
