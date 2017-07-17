@@ -1,5 +1,5 @@
-# practica con d3plus
+# práctica con d3plus
 
-treemap.html
+[treemap](treemap.html)
 
-carreras.html
+[pie & stacked area chart](carreras.html)
