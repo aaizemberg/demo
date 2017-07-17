@@ -1,5 +1,5 @@
 # práctica con d3plus
 
-[treemap](treemap.html)
+[Los graduados del ITBA, sobre un treemap](treemap.html)
 
-[pie & stacked area chart](carreras.html)
+[Los graduados del ITBA, pie & stacked area chart](carreras.html)
