@@ -3,14 +3,11 @@
 <script src="//d3plus.org/js/d3.js"></script>
 <script src="//d3plus.org/js/d3plus.js"></script>
 
-<div id="torta" style="width: 30%; float:left">
-</div>
-
-<div id="area" style="width: 70%; float:right">
-</div>
+<div id="torta" style="width: 30%; float:left"></div>
+<div id="area" style="width: 70%; float:right"></div>
 
 <script>
-  d3plus.viz()
+d3plus.viz()
         .container("#torta")
         .data("data.json")  
         .type("pie")    
@@ -19,7 +16,7 @@
         .time("año")    
         .draw()
 
-  d3plus.viz()
+d3plus.viz()
         .container("#area")  
         .data("data.json")  
         .type("stacked")
@@ -29,5 +26,6 @@
         .x("año")       
         .time("año")
         .shape({"interpolate": "basis"})
+        .format("es_ES")
         .draw()
 </script>
